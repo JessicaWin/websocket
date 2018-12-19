@@ -10,7 +10,6 @@
     <script th:inline="javascript">
     var url='ws://' + window.location.host+'/websocket/marco';  
     var sock = new WebSocket(url);
-
       sock.onopen = function() {
     	  console.log('Opening');
     	  sayMarco();
@@ -32,8 +31,8 @@
     	  sock.send("Marco!");
       }
 
-      $('#stop').click(function() {sock.close()});
-      </script>
+ 	  $('#stop').click(function() {sock.close()});
+ </script>
     
     <div id="output"></div>
   </body>
